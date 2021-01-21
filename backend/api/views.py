@@ -2,7 +2,12 @@ from django.views.generic import TemplateView
 from django.views.decorators.cache import never_cache
 from rest_framework import viewsets
 
-from .models import Message, MessageSerializer, Question, QuestionSerializer
+from .models import Message
+from .models import MessageSerializer
+from .models import Question
+from .models import QuestionSerializer
+from .models import Score
+from .models import ScoreSerializer
 
 
 # Serve Vue Application
@@ -20,3 +25,8 @@ class MessageViewSet(viewsets.ModelViewSet):
 class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
+
+
+class ScoreViewSet(viewsets.ModelViewSet):
+    queryset = Score.objects.all()
+    serializer_class = ScoreSerializer

@@ -36,10 +36,28 @@ class QuestionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Question
         fields = (
+            'id',
             'prompt',
             'choice_a',
             'choice_b',
             'choice_c',
             'choice_d',
             'answer'
+        )
+
+
+class Score(models.Model):
+    correct = models.PositiveIntegerField()
+    total = models.PositiveIntegerField()
+    name = models.CharField(max_length=200)
+
+
+class ScoreSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Score
+        fields = (
+            'id',
+            'correct',
+            'total',
+            'name',
         )
