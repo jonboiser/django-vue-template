@@ -1,35 +1,37 @@
 <template>
 
-  <div>
-    <!-- TODO: fix TypeErrors that are seen when this component loads -->
+  <div v-if="currentQuestion">
     <h1>{{ currentQuestion.prompt }}</h1>
-    <form>
+
+    <form ref="questions">
       <!-- QUESTION: How can we trap focus to the buttons when using the keyboard? -->
       <!-- QUESTION: Why do we have to provide a "type=button" attribute? -->
+      <!-- TODO implement keyboard shortcuts for pressing A-D instead of using mouse -->
       <div class="choices">
         <button
           v-for="(choice, idx) in currentQuestion.choices"
           :key="idx"
-          @click="handleClickCheck(idx)"
+          @click="handleClickChoice(idx + 1)"
           class="choice"
           type="button"
         >
-          {{ choice }}
+          ({{['A', 'B', 'C', 'D'][idx] }}) {{ choice }}
         </button>
       </div>
     </form>
 
-    <!-- TODO: Show feedback and "next" button after user responds -->
-    <!-- QUESTION: What else should/could the UI do after the user responds? -->
-    <template v-if="true">
+    <!-- TODO: Fix this section, since it always says the response is wrong -->
+    <template v-if="response">
       <div v-if="responseIsCorrect">
         That's right!
       </div>
+
       <div v-else>
         The correct answer is: {{ correctChoice }}
       </div>
+
       <div>
-        <button>Next Question</button>
+        <button @click="handleClickNext">Next Question</button>
       </div>
     </template>
   </div>
@@ -41,15 +43,13 @@
 import quizService from '@/services/quizService';
 
 // Basic shuffle function
-// function shuffle(array) {
-//   return array.sort(() => Math.random() - 0.5);
-// }
+// eslint-disable-next-line
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
 
 export default {
   name: 'QuizMain',
-  components: {},
-  mixins: [],
-  props: {},
   data() {
     // If a ?numQuestions query is provided in the URL, use that value instead
     // of the default of 4 questions
@@ -77,7 +77,11 @@ export default {
     },
   },
   methods: {
-    handleClickCheck() {
+    handleClickChoice(idx) {
+      this.response = idx;
+    },
+    handleClickNext() {
+      this.response = null;
       if (this.currentIdx < this.numQuestions - 1) {
         this.currentIdx = this.currentIdx + 1;
       } else {
@@ -92,11 +96,9 @@ export default {
         });
       }
     },
-  },
-  mounted() {
-    quizService.fetchQuestions().then(allQuestions => {
+    initializeQuestions(questions) {
       // TODO: Randomize the order of the questions
-      const selectedQuestions = allQuestions.slice(0, this.numQuestions);
+      const selectedQuestions = questions.slice(0, this.numQuestions);
 
       this.questions = selectedQuestions.map(question => {
         // TODO: Randomize the choices for each question
@@ -113,9 +115,17 @@ export default {
           correctIdx: question.answer - 1, // subtract one since arrays are zero-based
         };
       });
+    },
+  },
+  mounted() {
+    quizService.fetchQuestions().then(questions => {
+      this.initializeQuestions(questions);
+      this.$nextTick().then(() => {
+        // Focus on the first button after the choices mount
+        this.$refs.questions.elements[0].focus();
+      });
     });
   },
-  $trs: {},
 };
 </script>
 
@@ -133,7 +143,7 @@ export default {
     margin: 16px 0;
     font-size: 24px;
     font-weight: bold;
-    cursor: pointer;
+    text-align: left;
   }
 
 </style>

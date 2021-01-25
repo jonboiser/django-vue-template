@@ -1,0 +1,69 @@
+Which language is NOT supported by Kolibri?
+
+* German
+* Korean
+* Swahili
+* Klingon
+
+Who is the creator of the VueJS framework?
+
+* Albert Einstein
+* Evan You
+* Admiral Grace Hopper
+* Elon Musk
+
+In Javascript, what array prototype method would you use to keep or remove elements from an array?
+
+* reduce
+* forEach
+* filter
+* toUpperCase
+
+In which California university does Learning Equality have an office?
+
+* San Diego State University
+* University of California, San Diego
+* Stanford University
+* Humboldt State University
+
+What is the name of the most recent model made by Tesla Motors?
+
+* Model 3
+* Model Z
+* Model A
+* Model Y
+
+Which of the following is NOT a JavaScript frontend framework?
+
+* AngularJS
+* ReactJS
+* BurritoJS
+* VueJS
+
+Which breed of cat is known for its long flowing hair?
+
+* Persian
+* Sphynx
+* Siamese
+* Puma
+
+Which license is the Kolibri codebase under?
+
+* GPL
+* MIT
+* Apache
+* Top-Secret
+
+Which breed of dog is known for its short legs, long body, and large pointy ears?
+
+* Lhasa apso
+* Great dane
+* Dalmatian
+* Corgi
+
+Among other things, what makes a pure function "pure"?
+
+* It returns the same value, regardless of its input
+* It always cleans up after itself when it is run
+* It has no side-effects
+* Its name does not use the same letter twice

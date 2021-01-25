@@ -5,8 +5,11 @@ export default {
     const response = await api.get('questions/');
     return response.data;
   },
-  async saveResults(data) {
+  async saveScore(data) {
     console.log(data);
+    // TODO implement this
+  },
+  async fetchScores() {
     // TODO implement this
   },
 };

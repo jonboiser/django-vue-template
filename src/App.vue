@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Quiztopia</h1>
+    <h1>Learning Equality Trivia</h1>
     <router-view/>
   </div>
 </template>
@@ -14,4 +14,9 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+button {
+  cursor: pointer;
+}
+
 </style>

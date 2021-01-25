@@ -1,0 +1,122 @@
+[
+  {
+    "model": "api.question",
+    "pk": "1",
+    "fields": {
+      "prompt": "Which language is NOT supported by Kolibri?",
+      "choice_a": "German",
+      "choice_b": "Korean",
+      "choice_c": "Swahili",
+      "choice_d": "Klingon",
+      "answer": 4
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "2",
+    "fields": {
+      "prompt": "Who is the creator of the VueJS framework?",
+      "choice_a": "Albert Einstein",
+      "choice_b": "Evan You",
+      "choice_c": "Admiral Grace Hopper",
+      "choice_d": "Elon Musk",
+      "answer": 2
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "3",
+    "fields": {
+      "prompt": "In Javascript, what array prototype method would you use to keep or remove elements from an array?",
+      "choice_a": "reduce",
+      "choice_b": "forEach",
+      "choice_c": "filter",
+      "choice_d": "toUpperCase",
+      "answer": 3
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "4",
+    "fields": {
+      "prompt": "In which California university does Learning Equality have an office?",
+      "choice_a": "San Diego State University",
+      "choice_b": "University of California, San Diego",
+      "choice_c": "Stanford University",
+      "choice_d": "Humboldt State University",
+      "answer": 2
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "5",
+    "fields": {
+      "prompt": "What is the name of the most recent model made by Tesla Motors?",
+      "choice_a": "Model 3",
+      "choice_b": "Model Z",
+      "choice_c": "Model A",
+      "choice_d": "Model Y",
+      "answer": 4
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "6",
+    "fields": {
+      "prompt": "Which of the following is NOT a JavaScript frontend framework?",
+      "choice_a": "AngularJS",
+      "choice_b": "ReactJS",
+      "choice_c": "BurritoJS",
+      "choice_d": "VueJS",
+      "answer": 3
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "6",
+    "fields": {
+      "prompt": "Which breed of cat is known for its long flowing hair?",
+      "choice_a": "Persian",
+      "choice_b": "Sphynx",
+      "choice_c": "Siamese",
+      "choice_d": "Puma",
+      "answer": 1
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "7",
+    "fields": {
+      "prompt": "Which license is the Kolibri codebase under?",
+      "choice_a": "GPL",
+      "choice_b": "MIT",
+      "choice_c": "Apache",
+      "choice_d": "Top Secret",
+      "answer": 2
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "7",
+    "fields": {
+      "prompt": "Which breed of dog is known for its short legs, long body, and large pointy ears?",
+      "choice_a": "Lhasa Apso",
+      "choice_b": "Great Dane",
+      "choice_c": "Dalmatian",
+      "choice_d": "Corgi",
+      "answer": 4
+    }
+  },
+  {
+    "model": "api.question",
+    "pk": "8",
+    "fields": {
+      "prompt": "Among other things, what makes a pure function 'pure'?",
+      "choice_a": "It returns the same value, regardless of its input",
+      "choice_b": "It always cleans up after itself when it is run",
+      "choice_c": "It has no side-effects when it is run",
+      "choice_d": "Its name does not use the same leter more than once",
+      "answer": 3
+    }
+  }
+]

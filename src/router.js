@@ -4,6 +4,8 @@ import Router from 'vue-router';
 import Messages from '@/components/Messages';
 import QuizMain from '@/components/QuizMain';
 import Summary from '@/components/Summary';
+import QuizHome from '@/components/QuizHome';
+import Scores from '@/components/Scores';
 
 Vue.use(Router);
 
@@ -12,6 +14,11 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      component: QuizHome,
+    },
+    {
+      path: '/questions',
+      name: 'questions',
       component: QuizMain,
     },
     {
@@ -31,6 +38,11 @@ export default new Router({
           next({ name: 'home' });
         }
       },
+    },
+    {
+      path: '/scores',
+      name: 'scores',
+      component: Scores,
     },
     {
       path: '/messages',
