@@ -32,7 +32,6 @@ class Question(models.Model):
 
 
 class QuestionSerializer(serializers.HyperlinkedModelSerializer):
-    # TODO randomize choices on the backend
     class Meta:
         model = Question
         fields = (
@@ -48,7 +47,6 @@ class QuestionSerializer(serializers.HyperlinkedModelSerializer):
 
 class Score(models.Model):
     correct = models.PositiveIntegerField()
-    total = models.PositiveIntegerField()
     name = models.CharField(max_length=200)
 
 
@@ -58,6 +56,16 @@ class ScoreSerializer(serializers.HyperlinkedModelSerializer):
         fields = (
             'id',
             'correct',
-            'total',
             'name',
         )
+
+
+class UserResponses(models.Model):
+    """
+    Records the full record of questions given and responses received by users
+    """
+    pass
+
+
+class UserResponsesSerializer(serializers.Serializer):
+    pass

@@ -6,10 +6,9 @@ export default {
     return response.data;
   },
   async saveScore(data) {
-    console.log(data);
-    // TODO implement this
+    return {};
   },
   async fetchScores() {
-    // TODO implement this
+    return [];
   },
 };

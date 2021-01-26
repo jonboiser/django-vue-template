@@ -18,7 +18,11 @@ export default {
   name: 'QuizHome',
   methods: {
     handleClickStart() {
-      this.$router.replace({ name: 'questions' });
+      const questionsPageLink = {
+        name: 'questions',
+        query: { numQuestions: 4 },
+      };
+      this.$router.replace(questionsPageLink);
     },
   },
 };

@@ -30,3 +30,7 @@ class QuestionViewSet(viewsets.ModelViewSet):
 class ScoreViewSet(viewsets.ModelViewSet):
     queryset = Score.objects.all()
     serializer_class = ScoreSerializer
+
+
+class UserResponsesViewSet(viewsets.ModelViewSet):
+    pass

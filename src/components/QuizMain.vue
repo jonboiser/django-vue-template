@@ -42,12 +42,6 @@
 <script>
 import quizService from '@/services/quizService';
 
-// Basic shuffle function
-// eslint-disable-next-line
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
-}
-
 export default {
   name: 'QuizMain',
   data() {

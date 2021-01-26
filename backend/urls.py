@@ -12,11 +12,13 @@ from .api.views import index_view
 from .api.views import MessageViewSet
 from .api.views import QuestionViewSet
 from .api.views import ScoreViewSet
+from .api.views import UserResponsesViewSet
 
 router = routers.DefaultRouter()
 router.register('messages', MessageViewSet)
 router.register('questions', QuestionViewSet)
 router.register('scores', ScoreViewSet)
+router.register('userresponses', UserResponsesViewSet)
 
 urlpatterns = [
 
